@@ -4,9 +4,9 @@ import requests
 st.title('Rainfall Prediction App')
 st.markdown('Enter climatic paramters to predict rainfall in mm')
 
-pressure = st.number_input('Pressure', min_value=0, max_value=150000)
-sunshine = st.number_input('Sunshine', min_value=0, max_value=20)
-mean_temp = st.number_input('Mean Temperature', min_value=-50, max_value=50)
+pressure = st.number_input('Pressure (Pa)', min_value=0, max_value=200000)
+sunshine = st.number_input('Sunshine (hrs)', min_value=0, max_value=24)
+mean_temp = st.number_input('Mean Temperature (oC)', min_value=-50, max_value=50)
 
 if st.button('Predict Rainfall'):
     api_url = 'https://mailliwj.pythonanywhere.com/predict'
