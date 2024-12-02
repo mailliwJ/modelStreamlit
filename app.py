@@ -10,7 +10,7 @@ PREDICT_URL = f'{BASE_URL}/predict'
 
 def main():
     st.title('Rainfall Prediction Application')
-    st.sidebar.title('Navigation')
+    st.sidebar.title('')
 
     menu = st.sidebar.radio('Menu', ['Predict', 'Forecast', 'Update Data', 'Retrain'])
     if menu == "Predict":
@@ -23,7 +23,7 @@ def main():
         st.write('Retrain feature coming soon')
 
 def predict(PREDICT_URL):
-    st.title('Rainfall Prediction App')
+    st.title('Make a rainfall predictions')
     st.markdown('Enter climatic paramters to predict rainfall in mm')
 
     pressure = st.number_input('Pressure (Pa)', min_value=0, max_value=200000)
