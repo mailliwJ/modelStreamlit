@@ -20,7 +20,7 @@ if st.button('Predict Rainfall'):
         response = requests.post(api_url, json=payload)
         response.raise_for_status()
         result = response.json()
-        prediction = result.get('prediction', None)
+        prediction = result.get('Prediction', None)
 
         if prediction is not None:
             st.success(f' The predicted rainfall is {prediction:.1f}mm')
