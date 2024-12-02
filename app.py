@@ -50,3 +50,6 @@ def predict(PREDICT_URL):
 
         except requests.exceptions.RequestException as e:
             st.error(f'Error contacting the API: (e)')
+
+if __name__ == '__main__':
+    main()
