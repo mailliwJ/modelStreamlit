@@ -44,7 +44,7 @@ def predict(PREDICT_URL):
             prediction = result.get('Prediction', None)
 
             if prediction is not None:
-                st.success(f' The predicted rainfall is {prediction:.1f}mm')
+                st.success(f'Estimated rainfall for your specified parameters: {prediction:.1f}mm')
             else:
                 st.error('Could not retrieve a valid prediction from the API')
 
